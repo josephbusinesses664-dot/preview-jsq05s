@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darzi Alteration & Seamstress | Custom Tailoring in Modesto</title>
+    <style>
+        :root {
+            --primary: #4a2c6f; /* Deep Purple */
+            --secondary: #d4af37; /* Gold */
+            --bg-color: #f8f5fb; /* Soft Lavender-White */
+            --text-dark: #333;
+        }
+
+        body {
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            scroll-behavior: smooth;
+        }
+
+        /* Typography Styles */
+        h1, h2, h3 {
+            font-family: Georgia, 'Times New Roman', serif;
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        /* Header Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .logo a {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.8em;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        nav ul li a {
+            display: block;
+            padding: 10px 15px;
+            text-decoration: none;
+            color: var(--primary);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #eee;
+            color: var(--secondary);
+        }
+
+        section {
+            padding: 60px 5%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Hero Section */
+        #hero {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 80px 5%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero h1 {
+            color: white;
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #hero p.tagline {
+            font-family: Georgia, 'Times New Roman', serif;
+            font-size: 1.5em;
+            margin-bottom: 40px;
+            color: #e6e6fa; /* Lighter purple for subtitle */
+        }
+
+        /* Buttons */
+        .btn {
+            background-color: var(--secondary);
+            color: white;
+            text-decoration: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.1s;
+            display: inline-block;
+            border: none; /* For form elements */
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #c29b35; /* Slightly darker gold on hover */
+            transform: translateY(-1px);
+        }
+
+        /* Services Section */
+        #services h2 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid var(--secondary); /* Gold top border */
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            color: var(--primary);
+            margin-top: 0;
+            font-size: 1.4em;
+        }
+
+        /* About Section */
+        #about p {
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+
+        /* Contact Section */
+        #contact h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .contact-info p, .contact-info a {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .phone-number {
+            font-size: 2.5em;
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 20px;
+            text-decoration: none;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9em;
+        }
+
+        /* Media Queries for Mobile Responsiveness */
+        @media (max-width: 640px) {
+            nav {
+                flex-direction: column;
+                padding: 15px 20px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                margin-top: 10px;
+            }
+
+            nav ul li a {
+                text-align: center;
+                padding: 8px 15px;
+            }
+            
+            #hero h1 {
+                font-size: 2.5em;
+            }
+            
+            #hero p.tagline {
+                font-size: 1.2em;
+            }
+
+            /* Grid is already responsive due to auto-fit, but let's enforce a single column for safety */
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. Header and Sticky Navigation -->
+    <header>
+        <nav>
+            <div class="logo"><a href="#">Darzi Alteration & Seamstress</a></div>
+            <ul>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 2. Hero Section -->
+    <section id="hero">
+        <h1>Darzi Alteration & Seamstress</h1>
+        <p class="tagline">Custom Alterations & Tailoring in Modesto</p>
+        <a href="tel:+12098889893" class="btn" style="font-size: 1.2em;">📞 Call (209) 888-9893</a>
+    </section>
+
+    <!-- 3. Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="card">
+                <h3>Clothing Alterations</h3>
+                <p>Perfect adjustments to fit your favorite garments, ensuring a flawless look every time.</p>
+            </div>
+            <div class="card">
+                <h3>Custom Tailoring</h3>
+                <p>From suits to dresses, we design and tailor custom pieces built precisely for you.</p>
+            </div>
+            <div class="card">
+                <h3>Seamstress Services</h3>
+                <p>General seamstress work, including hems, gathering, zipper replacements, and structural fixes.</p>
+            </div>
+            <div class="card">
+                <h3>Repairs & Resizing</h3>
+                <p>Expert repairs for cherished items and professional resizing to updated body dimensions.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. About Section -->
+    <section id="about" style="background-color: #fef9fb;">
+        <h2>About Us</h2>
+        <p>Darzi Alteration & Seamstress is a skilled local seamstress shop offering precise alterations and custom tailoring with attention to every detail.</p>
+        <p>We pride ourselves on our commitment to quality craftsmanship, welcoming both returning loyal customers and new clients alike into our studio.</p>
+    </section>
+
+    <!-- 5. Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-info" style="text-align: center;">
+            <a href="tel:+12098889893" class="phone-number">(209) 888-9893</a>
+            <p><strong>Visit Us At:</strong></p>
+            <address style="font-style: normal; margin-bottom: 25px;">
+                2417 Alexia Way, Modesto, CA 95355
+            </address>
+            <hr style="border-color: var(--primary); width: 80%; max-width: 300px; margin: 20px auto;">
+            <p style="font-weight: bold; color: var(--primary);">Hours: By appointment - please call ahead</p>
+        </div>
+    </section>
+
+    <!-- 6. Footer -->
+    <footer>
+        Darzi Alteration & Seamstress © 2026
+    </footer>
+
+</body>
+</html>
